@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- windows10.0.19041.0: cần cho Windows.Data.Pdf (render PDF không cần phần mềm ngoài) -->
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>PrintNetwork</AssemblyName>
+    <RootNamespace>PrintNetwork</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>PrintNetwork</Product>
+    <Description>In nội bộ qua mạng LAN</Description>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <!-- .NET 10 bật CET mặc định; Windows 10 chưa cập nhật đủ sẽ báo "doesn't fully support CET" và không chạy. -->
+    <CETCompat>false</CETCompat>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Company>Vuth Team</Company>
+    <Authors>ThaoVD</Authors>
+    <RepositoryUrl>https://github.com/thaovd/PrintNetwork</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Cùng file với icon của exe, dùng cho cửa sổ và khay hệ thống (đủ các cỡ 16…256 px). -->
+    <EmbeddedResource Include="app.ico" LogicalName="PrintNetwork.app.ico" />
+  </ItemGroup>
+
+</Project>
